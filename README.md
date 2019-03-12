@@ -10,6 +10,7 @@ See
  * https://github.com/AJMansfield/TriacDimmer
  * https://github.com/hwwong/stm8s-triac-controller
  * https://github.com/boxysean/TriacFanout
+ * https://github.com/Miceuz/triac-bloc
 
 This library synchronizes automatically to mains frequency. 
 It takes 5 samples of zero cross pulses and uses average.
