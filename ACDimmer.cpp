@@ -112,13 +112,12 @@ ISR(TIMER1_CAPT_vect) {
   rising = !rising;
   edge_detect = 1;
 
-  csec++;
-  if (csec == 100) { // TODO consider 60Hz
-    csec = 0;
-    sec++;
-  }
-
   if (rising) {
+    csec++;
+    if (csec == 100) { // TODO consider 60Hz
+      csec = 0;
+      sec++;
+    }
     si = (si + 1) % NUM_SAMPLES;
 #ifndef TOO_LONG_INTERRUPT_METHOD
     acdimmer_calcTimer();
